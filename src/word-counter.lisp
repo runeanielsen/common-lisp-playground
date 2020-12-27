@@ -11,7 +11,8 @@
   (split-str-1 string separator))
 
 (defun split-str-1 (string separator &optional (r nil))
-  (let ((n (position separator string
+  (let ((n (position separator
+                     string
                      :from-end t
                      :test #'(lambda (x y)
                                (find y x :test #'string=)))))
