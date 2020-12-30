@@ -7,10 +7,7 @@
 (defun count-words (word)
   (length (split-str word " ")))
 
-(defun split-str (string separator)
-  (split-str-1 string separator))
-
-(defun split-str-1 (string separator &optional (r nil))
+(defun split-str (string separator &optional (r nil))
   (let ((n (position separator
                      string
                      :from-end t
